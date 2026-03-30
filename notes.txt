@@ -152,3 +152,57 @@ Algorithm of RNN:
 3. After last word:
 - Use memory to make prediction
 
+new memory = previous memory + current word
+
+- Same network repeated across time
+- Same weights used at every step
+- This is called weights sharing
+
+Summary of RNN:
+1. Handle sequences
+2. Maintains memory
+3. Works for text, speech, time series
+
+Limitation of RNN:
+1. Cannot handle long dependencies
+2. Slow (sequential processing)
+
+Types of RNN:
+1. One-to-One - process single fixed size input to produce single fixed size output
+  Example: Image classification (input one image and get one label like "cat" or "dog")
+2. One-to-Many - process single input to produce a sequence of output
+  Example: Image Captioning (single image input produces a sequence of words)
+3. Many-to-One - takes a sequence of input to produce a single output
+  Example: Sentiment Analysis, Spam classification
+4. Many-to-Many - process multiple inputs to produce multiple outputs
+  Example: Language Translator
+
+
+Key Architecture of RNN:
+- Standard RNN often struggle with the "vanishing gradient problem" where they forget information from the distant past. So we have advanced variants to solve this problem using gating mechanism:
+- LSTM - Long short term memory: Uses three gates (input, output, forget)
+- GRU - Gated Recurrent Unit: Uses two gates (update and reset)
+- BiRNN - Bidirectional RNN: process the sequence in both forward and backward direction
+- Deep RNN - Stack multiple RNN layers on top of each other
+
+
+BPTT - Backpropagation Through Time
+- To understand BPTT, think of RNN as standard deep network that has been unrolled in time. Because same parameters are used at every step...
+
+
+==================================
+
+LSTM - Long Short Term Memory
+
+Example: I was watching a movie yesterday with my friends and after a long discussion we realized that movie was bad.
+
+Important word = bad
+It appears very late RNN may forget it
+
+RNN problem:
+Memory gets weaker as sequence grows: Vanishing memory problem
+
+What LSTM does:
+- What to remember
+- What to forget
+- What to output
