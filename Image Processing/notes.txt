@@ -1,0 +1,18 @@
+MediaPipe
+ -  will give you precise landmarks points
+
+
+ Projects :
+ - Snapchat 
+ - Face mask overlay
+ - Emotion based
+ - Finger Counting
+ - Gesture based volume control
+ - Virtual Mouse 
+ - Sign language 
+ Face Mesh System 
+ - 468 landmarks 
+
+
+
+ pip install MediaPipe
